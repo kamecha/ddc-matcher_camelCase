@@ -26,7 +26,7 @@ export class Filter extends BaseFilter<Params> {
 		};
 		return Promise.resolve(args.items.filter((item) => {
 			let word = beginningOfWord(item.word);
-			return word.toLowerCase().startsWith(args.completeStr);
+			return word.startsWith(args.completeStr);
 		}));
 	}
 
