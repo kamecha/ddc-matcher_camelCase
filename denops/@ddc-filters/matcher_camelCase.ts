@@ -4,8 +4,7 @@ import {
 	SourceOptions,
 } from "https://deno.land/x/ddc_vim@v3.3.0/types.ts";
 
-type Params = {
-};
+type Params = Record<never, never>;
 
 export class Filter extends BaseFilter<Params> {
 	override filter(args: {
