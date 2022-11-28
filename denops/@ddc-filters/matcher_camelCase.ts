@@ -8,6 +8,7 @@ type Params = Record<never, never>;
 
 export class Filter extends BaseFilter<Params> {
 	override filter(args: {
+		sourceOptions: SourceOptions,
 		filterParams: Params,
 		completeStr: string,
 		items: Item[],
