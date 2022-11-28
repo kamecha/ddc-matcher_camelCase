@@ -9,7 +9,6 @@ type Params = Record<never, never>;
 export class Filter extends BaseFilter<Params> {
 	override filter(args: {
 		sourceOptions: SourceOptions,
-		filterParams: Params,
 		completeStr: string,
 		items: Item[],
 	}): Promise<Item[]> {
@@ -28,11 +27,8 @@ export class Filter extends BaseFilter<Params> {
 		return Promise.resolve(args.items.filter((item) => {
 			let word = beginningOfWord(item.word);
 			return word.toLowerCase().startsWith(args.completeStr);
-		}
+		}));
 	}
 
-	override params(): Params {
-		return {
-		};
-	}
+	override params(): Params { return {}; }
 }
